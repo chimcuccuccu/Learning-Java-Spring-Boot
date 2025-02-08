@@ -9,6 +9,16 @@ public class Student {
 
     private String favoriteLanguage;
 
+    public String getFavoriteSystems() {
+        return favoriteSystems;
+    }
+
+    public void setFavoriteSystems(String favoriteSystems) {
+        this.favoriteSystems = favoriteSystems;
+    }
+
+    private String favoriteSystems;
+
     public String getFavoriteLanguage() {
         return favoriteLanguage;
     }
