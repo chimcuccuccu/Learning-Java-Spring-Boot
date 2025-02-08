@@ -7,6 +7,26 @@ public class Student {
 
     private String country;
 
+    private String favoriteLanguage;
+
+    public String getFavoriteSystems() {
+        return favoriteSystems;
+    }
+
+    public void setFavoriteSystems(String favoriteSystems) {
+        this.favoriteSystems = favoriteSystems;
+    }
+
+    private String favoriteSystems;
+
+    public String getFavoriteLanguage() {
+        return favoriteLanguage;
+    }
+
+    public void setFavoriteLanguage(String favoriteLanguage) {
+        this.favoriteLanguage = favoriteLanguage;
+    }
+
     public Student() {
 
     }

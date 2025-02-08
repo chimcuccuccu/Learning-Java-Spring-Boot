@@ -9,33 +9,45 @@
 <h3>Student Registration Form</h3>
 
 <form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
-
-    First name: <input type="text" th:field="*{firstName}" />
+    First name: <input type = "text" th:field="*{firstName}"/>
+    <!-- *{..} is shortcut syntax for: ${student.firstName}-->
 
     <br><br>
 
-    Last name: <input type="text" th:field="*{lastName}" />
+    Last name: <input type = "text" th:field="*{lastName}"/>
+
+    <br><br>
 
     <br><br>
 
     Country:
-
     <select th:field="*{country}">
         <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"/>
-
     </select>
 
     <br><br>
 
-    <input type="submit" value="Submit" />
+    <br><br>
+
+    Favorite Programming Language:
+    <input type="radio" th:field="*{favoriteLanguage}"
+                        th:each="tempLang : ${languages}"
+                        th:value="${tempLang}"
+                        th:text="${tempLang}">
+
+    <br><br>
+    Favorite Operating Systems:
+    <input type="checkbox" th:field="*{favoriteSystems}"
+                            th:each="tempSystems : ${languages}"
+                            th:value="${tempSystems}"
+                            th:text="${tempSystems}">
+    <br><br>
+
+    <br><br>
+    <input type = "submit" value = "Submit"/>
 
 </form>
 
+
 </body>
 </html>
-
-
-
-
-
-
